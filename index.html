@@ -65,6 +65,10 @@
                 aspect-ratio: 4/3;
             }
         }
+        [lang="en"] .zh-content,
+        [lang="zh"] .en-content {
+            display: none;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -75,18 +79,29 @@
                     <img src="https://via.placeholder.com/50x50" alt="Monster Survivors Logo" class="h-10 w-10 mr-3">
                     <span class="text-xl font-semibold text-apple-black">Monster Survivors</span>
                 </div>
-                <button class="btn-play text-white font-bold py-2 px-4 rounded-full">
-                    Play Now
-                </button>
+                <div class="flex items-center gap-4">
+                    <select id="languageSelect" class="bg-white border border-gray-300 rounded-md px-3 py-1 text-sm">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                    <button class="btn-play text-white font-bold py-2 px-4 rounded-full">
+                        <span class="en-content">Play Now</span>
+                        <span class="zh-content">立即游戏</span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-black">Monster Survivors</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-apple-black">
+                <span class="en-content">Monster Survivors</span>
+                <span class="zh-content">怪物生存者</span>
+            </h1>
             <p class="text-xl text-apple-darkgray max-w-3xl mx-auto">
-                An epic survival adventure where you battle endless waves of monsters in a constantly evolving world.
+                <span class="en-content">An epic survival adventure where you battle endless waves of monsters in a constantly evolving world.</span>
+                <span class="zh-content">一场史诗级的生存冒险，在不断进化的世界中与无尽的怪物浪潮战斗。</span>
             </p>
         </section>
 
@@ -103,47 +118,82 @@
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div class="bg-white p-6 rounded-2xl shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-apple-black">Game Overview</h2>
+                <h2 class="text-2xl font-bold mb-4 text-apple-black">
+                    <span class="en-content">Game Overview</span>
+                    <span class="zh-content">游戏概览</span>
+                </h2>
                 <p class="text-apple-darkgray">
-                    Monster Survivors is a thrilling survival game where you face increasingly difficult waves of monsters. Choose your character, upgrade your abilities, and survive as long as possible in this challenging adventure.
+                    <span class="en-content">Monster Survivors is a thrilling survival game where you face increasingly difficult waves of monsters. Choose your character, upgrade your abilities, and survive as long as possible in this challenging adventure.</span>
+                    <span class="zh-content">怪物生存者是一款刺激的生存游戏，你将面对越来越困难的怪物波次。选择你的角色，升级你的能力，在这个充满挑战的冒险中尽可能地生存下去。</span>
                 </p>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-apple-black">How to Play</h2>
+                <h2 class="text-2xl font-bold mb-4 text-apple-black">
+                    <span class="en-content">How to Play</span>
+                    <span class="zh-content">游戏指南</span>
+                </h2>
                 <p class="text-apple-darkgray">
-                    Use WASD or arrow keys to move your character. Automatically attack nearby enemies and collect experience to level up. Choose upgrades wisely to enhance your survival chances as the difficulty increases with time.
+                    <span class="en-content">Use WASD or arrow keys to move your character. Automatically attack nearby enemies and collect experience to level up. Choose upgrades wisely to enhance your survival chances as the difficulty increases with time.</span>
+                    <span class="zh-content">使用WASD或方向键移动你的角色。自动攻击附近的敌人并收集经验值来升级。随着时间推移难度会增加，请明智地选择升级项目以提高生存机会。</span>
                 </p>
             </div>
         </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-bold mb-6 text-apple-black">Game Features</h2>
+            <h2 class="text-2xl font-bold mb-6 text-apple-black">
+                <span class="en-content">Game Features</span>
+                <span class="zh-content">游戏特色</span>
+            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-5 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-apple-black">Multiple Characters</h3>
-                    <p class="text-apple-darkgray">Choose from various characters with unique abilities and play styles.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-apple-black">
+                        <span class="en-content">Multiple Characters</span>
+                        <span class="zh-content">多样角色</span>
+                    </h3>
+                    <p class="text-apple-darkgray">
+                        <span class="en-content">Choose from various characters with unique abilities and play styles.</span>
+                        <span class="zh-content">从具有独特能力和游戏风格的多个角色中进行选择。</span>
+                    </p>
                 </div>
                 <div class="bg-white p-5 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-apple-black">Upgrade System</h3>
-                    <p class="text-apple-darkgray">Level up and enhance your character's abilities as you progress.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-apple-black">
+                        <span class="en-content">Upgrade System</span>
+                        <span class="zh-content">升级系统</span>
+                    </h3>
+                    <p class="text-apple-darkgray">
+                        <span class="en-content">Level up and enhance your character's abilities as you progress.</span>
+                        <span class="zh-content">随着游戏进程升级并增强你角色的能力。</span>
+                    </p>
                 </div>
                 <div class="bg-white p-5 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 text-apple-black">Endless Challenges</h3>
-                    <p class="text-apple-darkgray">Face increasingly difficult waves of monsters in an endless survival mode.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-apple-black">
+                        <span class="en-content">Endless Challenges</span>
+                        <span class="zh-content">无尽挑战</span>
+                    </h3>
+                    <p class="text-apple-darkgray">
+                        <span class="en-content">Face increasingly difficult waves of monsters in an endless survival mode.</span>
+                        <span class="zh-content">在无尽生存模式中面对越来越困难的怪物波次。</span>
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="bg-white p-8 rounded-2xl shadow-md mb-16">
-            <h2 class="text-2xl font-bold mb-6 text-apple-black">About Monster Survivors</h2>
+            <h2 class="text-2xl font-bold mb-6 text-apple-black">
+                <span class="en-content">About Monster Survivors</span>
+                <span class="zh-content">关于怪物生存者</span>
+            </h2>
             <p class="text-apple-darkgray mb-4">
-                Monster Survivors draws inspiration from popular roguelike survival games, offering a unique twist with its monster-themed world. Your goal is simple yet challenging: survive as long as possible against endless waves of increasingly powerful monsters.
+                <span class="en-content">Monster Survivors draws inspiration from popular roguelike survival games, offering a unique twist with its monster-themed world. Your goal is simple yet challenging: survive as long as possible against endless waves of increasingly powerful monsters.</span>
+                <span class="zh-content">怪物生存者从流行的Roguelike生存游戏中汲取灵感，通过其怪物主题世界提供独特的游戏体验。你的目标简单但充满挑战：在越来越强大的无尽怪物浪潮中尽可能地生存。</span>
             </p>
             <p class="text-apple-darkgray mb-4">
-                As you defeat enemies, you'll gain experience points to level up and enhance your character's abilities. Choose your upgrades wisely, as the right combination of skills can make the difference between survival and defeat.
+                <span class="en-content">As you defeat enemies, you'll gain experience points to level up and enhance your character's abilities. Choose your upgrades wisely, as the right combination of skills can make the difference between survival and defeat.</span>
+                <span class="zh-content">当你击败敌人时，你将获得经验值来升级并增强角色的能力。明智地选择你的升级，因为正确的技能组合可能决定生存与失败的差异。</span>
             </p>
             <p class="text-apple-darkgray">
-                With its simple controls but deep strategic elements, Monster Survivors is easy to learn but difficult to master. How long can you survive in this monster-infested world?
+                <span class="en-content">With its simple controls but deep strategic elements, Monster Survivors is easy to learn but difficult to master. How long can you survive in this monster-infested world?</span>
+                <span class="zh-content">凭借简单的控制但深层的战略元素，怪物生存者易于上手但难以精通。你能在这个充满怪物的世界中生存多久？</span>
             </p>
         </section>
     </main>
@@ -152,21 +202,51 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p>&copy; 2023 Monster Survivors. All rights reserved.</p>
+                    <p>
+                        <span class="en-content">&copy; 2024 Monster Survivors. All rights reserved.</span>
+                        <span class="zh-content">&copy; 2024 怪物生存者。保留所有权利。</span>
+                    </p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-apple-blue transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-apple-blue transition-colors">Contact</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">
+                        <span class="en-content">Privacy Policy</span>
+                        <span class="zh-content">隐私政策</span>
+                    </a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">
+                        <span class="en-content">Terms of Service</span>
+                        <span class="zh-content">服务条款</span>
+                    </a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">
+                        <span class="en-content">Contact</span>
+                        <span class="zh-content">联系我们</span>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.btn-play').addEventListener('click', function() {
-            const gameFrame = document.querySelector('.game-iframe');
-            gameFrame.scrollIntoView({ behavior: 'smooth' });
+        // 语言切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('languageSelect');
+            
+            // 获取用户之前选择的语言或默认为英文
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            document.documentElement.lang = savedLanguage;
+            languageSelect.value = savedLanguage;
+
+            // 监听语言选择变化
+            languageSelect.addEventListener('change', function() {
+                const selectedLanguage = this.value;
+                document.documentElement.lang = selectedLanguage;
+                localStorage.setItem('preferredLanguage', selectedLanguage);
+            });
+
+            // 滚动到游戏区域的功能
+            document.querySelector('.btn-play').addEventListener('click', function() {
+                const gameFrame = document.querySelector('.game-iframe');
+                gameFrame.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
